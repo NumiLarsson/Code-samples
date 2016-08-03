@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Module add</title>
+<link rel="stylesheet" type="text/css" href="my_style.css" title="EDoc">
+</head>
+<body bgcolor="white">
+<div class="navbar"><a name="#navbar_top"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<hr>
+
+<h1>Module add</h1>
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>Erlang mini project.
+
+
+<h2><a name="description">Description</a></h2>Erlang mini project.
+<h2><a name="index">Function Index</a></h2>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#combine_results-4">combine_results/4</a></td><td>combine_result is the "listener" in this program, simply listens to messages and enters
+  them in the correct order (using insert_at), in the correct list.</td></tr>
+<tr><td valign="top"><a href="#manage_calc_workers-4">manage_calc_workers/4</a></td><td>The "Parent" of all the workers, the process responsible for the calculation and
+  concurrent part of this program.</td></tr>
+<tr><td valign="top"><a href="#manage_calc_workers-5">manage_calc_workers/5</a></td><td></td></tr>
+<tr><td valign="top"><a href="#start-3">start/3</a></td><td>Accepts 3 ints as input, A and B are the values to add together and Base is the base
+  in which the numbers should be shown and the result be.</td></tr>
+<tr><td valign="top"><a href="#start-4">start/4</a></td><td>Accepts 3 ints as input, A and B are the values to add together and Base is the base
+  in which the numbers should be shown and the result be.</td></tr>
+</table>
+
+<h2><a name="functions">Function Details</a></h2>
+
+<h3 class="function"><a name="combine_results-4">combine_results/4</a></h3>
+<div class="spec">
+<p><tt>combine_results(ResultList, CarryList, Owner, WorkerPIDList) -&gt; {ResultList, CarryList}</tt>
+<ul class="definitions"><li><tt>ResultList = [integer()]</tt></li><li><tt>CarryList = [integer()]</tt></li><li><tt>Owner = integer()</tt></li><li><tt>WorkerPIDList = [integer()]</tt></li></ul></p>
+</div><p>combine_result is the "listener" in this program, simply listens to messages and enters
+  them in the correct order (using insert_at), in the correct list.</p>
+
+<h3 class="function"><a name="manage_calc_workers-4">manage_calc_workers/4</a></h3>
+<div class="spec">
+<p><tt>manage_calc_workers(A, B, Base, Parent) -&gt; {Result, CarryList}</tt>
+<ul class="definitions"><li><tt>A = [integer()]</tt></li><li><tt>B = [integer()]</tt></li><li><tt>Base = integer()</tt></li><li><tt>Parent = integer()</tt></li><li><tt>Result = [integer()]</tt></li><li><tt>CarryList = [integer()]</tt></li></ul></p>
+</div><p>The "Parent" of all the workers, the process responsible for the calculation and
+  concurrent part of this program.</p>
+
+<h3 class="function"><a name="manage_calc_workers-5">manage_calc_workers/5</a></h3>
+<div class="spec">
+<p><tt>manage_calc_workers(A, B, Base, Parent, Options) -&gt; {Result, CarryList}</tt>
+<ul class="definitions"><li><tt>A = [integer()]</tt></li><li><tt>B = [integer()]</tt></li><li><tt>Base = integer()</tt></li><li><tt>Parent = integer()</tt></li><li><tt>Result = [integer()]</tt></li><li><tt>CarryList = [integer()]</tt></li><li><tt>Option = atom() | tuple()</tt></li><li><tt>Options = [Option]</tt></li></ul></p>
+</div>
+
+<h3 class="function"><a name="start-3">start/3</a></h3>
+<div class="spec">
+<p><tt>start(A, B, Base) -&gt; Result</tt>
+<ul class="definitions"><li><tt>A = integer()</tt></li><li><tt>B = integer()</tt></li><li><tt>Base = integer()</tt></li><li><tt>Result = [integer()]</tt></li></ul></p>
+</div><p>Accepts 3 ints as input, A and B are the values to add together and Base is the base
+  in which the numbers should be shown and the result be.
+  Input is only allowed in decimalform</p>
+
+<h3 class="function"><a name="start-4">start/4</a></h3>
+<div class="spec">
+<p><tt>start(A, B, Base, Options) -&gt; ok</tt>
+<ul class="definitions"><li><tt>A = integer()</tt></li><li><tt>B = integer()</tt></li><li><tt>Base = integer()</tt></li><li><tt>Option = atom() | tuple()</tt></li><li><tt>Options = [Option]</tt></li></ul></p>
+</div><p>Accepts 3 ints as input, A and B are the values to add together and Base is the base
+  in which the numbers should be shown and the result be. /4 also allows an optional touple
+  which can contain any of the options listed in the specifications (Update this).
+  Input is only allowed in decimalform</p>
+<hr>
+
+<div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
+<p><i>Generated by EDoc, Apr 15 2016, 15:06:15.</i></p>
+</body>
+</html>
