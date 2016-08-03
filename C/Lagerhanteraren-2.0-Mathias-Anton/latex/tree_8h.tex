@@ -1,0 +1,361 @@
+\hypertarget{tree_8h}{}\section{tree.\+h File Reference}
+\label{tree_8h}\index{tree.\+h@{tree.\+h}}
+
+
+Handles the binary tree for the database.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtree}{tree} \hyperlink{tree_8h_aabd08cfd7893b1b0d401ce689de8c1b7}{tree\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtree}{tree\+\_\+t} $\ast$ \hyperlink{tree_8h_a9d7ad8c6363f4801a519090c7e883562}{tree\+\_\+new} (char $\ast$name, char $\ast$description, int price, char $\ast$shelf, int quantity)
+\begin{DoxyCompactList}\small\item\em creates a new node \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{tree_8h_a5a837555130e30443509d125aaca3270}{get\+\_\+node\+\_\+name} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em returns the node name \end{DoxyCompactList}\item 
+int \hyperlink{tree_8h_ac7a63c2e1de2e9e7b086a403f477f179}{tree\+\_\+size} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em get the size of the tree \end{DoxyCompactList}\item 
+int \hyperlink{tree_8h_ac892293edb990109e99f00807f1a9fcd}{tree\+\_\+depth} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree})
+\begin{DoxyCompactList}\small\item\em Get the depth of the tree. \end{DoxyCompactList}\item 
+int \hyperlink{tree_8h_a3cd7533992f2269289869a5351ad07ae}{tree\+\_\+insert} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$\hyperlink{structtree}{tree}, \hyperlink{structtree}{tree\+\_\+t} $\ast$insert)
+\begin{DoxyCompactList}\small\item\em insert a node in tree \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_a5caa21852a879ed4559c600a75b9ad73}{tree\+\_\+remove} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$root, \hyperlink{structtree}{tree\+\_\+t} $\ast$node, int index)
+\begin{DoxyCompactList}\small\item\em removes node at index \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_ae1b16dd81e8fae922fcea2c8e9b0d376}{tree\+\_\+edit} (\hyperlink{structtree}{tree\+\_\+t} $\ast$root, \hyperlink{structtree}{tree\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em edit given node \end{DoxyCompactList}\item 
+\hyperlink{structtree}{tree\+\_\+t} $\ast$ \hyperlink{tree_8h_a65c105c31c3661d781a3aba82f34e464}{get\+\_\+node\+\_\+at\+\_\+index} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, int pos)
+\begin{DoxyCompactList}\small\item\em gets node at given index \end{DoxyCompactList}\item 
+\hyperlink{structtree}{tree\+\_\+t} $\ast$ \hyperlink{tree_8h_a79fb0f53a3dd7b90ba38f6e17fee47c5}{get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node, char $\ast$shelf)
+\begin{DoxyCompactList}\small\item\em gets node at given shelf \end{DoxyCompactList}\item 
+\hyperlink{structtree}{tree\+\_\+t} $\ast$ \hyperlink{tree_8h_adca9a2ab258432fa6ca019edd2f2722a}{tree\+\_\+search\+\_\+duplicant} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em search for duplicant products \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_a29b7dcd37cffa52f6b3349b3477596e4}{add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node, char $\ast$shelf, int quantity)
+\begin{DoxyCompactList}\small\item\em adds shelf to an existing node \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_a34656dda0eff22b6021386f5079fa05d}{print\+\_\+short\+\_\+tree} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree}, int start, int range)
+\begin{DoxyCompactList}\small\item\em prints products names, shelf and count \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_a8bfaf9827cbfd5840d851186f68af7f2}{print\+\_\+tree\+\_\+node} (\hyperlink{structtree}{tree\+\_\+t} $\ast$node)
+\begin{DoxyCompactList}\small\item\em prints products full description \end{DoxyCompactList}\item 
+void \hyperlink{tree_8h_a1b044119bc749b2029b72007992c09b1}{free\+\_\+tree} (\hyperlink{structtree}{tree\+\_\+t} $\ast$root)
+\begin{DoxyCompactList}\small\item\em frees the tree from the memory \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the binary tree for the database. 
+
+\begin{DoxyAuthor}{Authors}
+\+: Anton Larsson \& Mathias Palm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 27 Oct 2015 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{tree_8h_aabd08cfd7893b1b0d401ce689de8c1b7}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+t@{tree\+\_\+t}}
+\index{tree\+\_\+t@{tree\+\_\+t}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tree} {\bf tree\+\_\+t}}\label{tree_8h_aabd08cfd7893b1b0d401ce689de8c1b7}
+struct for the the binary tree 
+
+\subsection{Function Documentation}
+\hypertarget{tree_8h_a29b7dcd37cffa52f6b3349b3477596e4}{}\index{tree.\+h@{tree.\+h}!add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree@{add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree}}
+\index{add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree@{add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree}!tree.\+h@{tree.\+h}}
+\subsubsection[{add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree(tree\+\_\+t $\ast$node, char $\ast$shelf, int quantity)}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+shelf\+\_\+to\+\_\+existing\+\_\+tree (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node, }
+\item[{char $\ast$}]{shelf, }
+\item[{int}]{quantity}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a29b7dcd37cffa52f6b3349b3477596e4}
+
+
+adds shelf to an existing node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em product} & shelf\\
+\hline
+{\em quantity} & to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_a1b044119bc749b2029b72007992c09b1}{}\index{tree.\+h@{tree.\+h}!free\+\_\+tree@{free\+\_\+tree}}
+\index{free\+\_\+tree@{free\+\_\+tree}!tree.\+h@{tree.\+h}}
+\subsubsection[{free\+\_\+tree(tree\+\_\+t $\ast$root)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+tree (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{root}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a1b044119bc749b2029b72007992c09b1}
+
+
+frees the tree from the memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_a79fb0f53a3dd7b90ba38f6e17fee47c5}{}\index{tree.\+h@{tree.\+h}!get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location@{get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location}}
+\index{get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location@{get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location}!tree.\+h@{tree.\+h}}
+\subsubsection[{get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location(tree\+\_\+t $\ast$node, char $\ast$shelf)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree\+\_\+t}$\ast$ get\+\_\+goods\+\_\+for\+\_\+storage\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node, }
+\item[{char $\ast$}]{shelf}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a79fb0f53a3dd7b90ba38f6e17fee47c5}
+
+
+gets node at given shelf 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em shelf} & as a string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the nood at given shelf 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a65c105c31c3661d781a3aba82f34e464}{}\index{tree.\+h@{tree.\+h}!get\+\_\+node\+\_\+at\+\_\+index@{get\+\_\+node\+\_\+at\+\_\+index}}
+\index{get\+\_\+node\+\_\+at\+\_\+index@{get\+\_\+node\+\_\+at\+\_\+index}!tree.\+h@{tree.\+h}}
+\subsubsection[{get\+\_\+node\+\_\+at\+\_\+index(tree\+\_\+t $\ast$tree, int pos)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree\+\_\+t}$\ast$ get\+\_\+node\+\_\+at\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a65c105c31c3661d781a3aba82f34e464}
+
+
+gets node at given index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em index} & of the node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the nood at index 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a5a837555130e30443509d125aaca3270}{}\index{tree.\+h@{tree.\+h}!get\+\_\+node\+\_\+name@{get\+\_\+node\+\_\+name}}
+\index{get\+\_\+node\+\_\+name@{get\+\_\+node\+\_\+name}!tree.\+h@{tree.\+h}}
+\subsubsection[{get\+\_\+node\+\_\+name(tree\+\_\+t $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+node\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a5a837555130e30443509d125aaca3270}
+
+
+returns the node name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & tree node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node name as a string 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a34656dda0eff22b6021386f5079fa05d}{}\index{tree.\+h@{tree.\+h}!print\+\_\+short\+\_\+tree@{print\+\_\+short\+\_\+tree}}
+\index{print\+\_\+short\+\_\+tree@{print\+\_\+short\+\_\+tree}!tree.\+h@{tree.\+h}}
+\subsubsection[{print\+\_\+short\+\_\+tree(tree\+\_\+t $\ast$tree, int start, int range)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+short\+\_\+tree (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree, }
+\item[{int}]{start, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a34656dda0eff22b6021386f5079fa05d}
+
+
+prints products names, shelf and count 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em start} & index\\
+\hline
+{\em number} & of products to show on each page \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_a8bfaf9827cbfd5840d851186f68af7f2}{}\index{tree.\+h@{tree.\+h}!print\+\_\+tree\+\_\+node@{print\+\_\+tree\+\_\+node}}
+\index{print\+\_\+tree\+\_\+node@{print\+\_\+tree\+\_\+node}!tree.\+h@{tree.\+h}}
+\subsubsection[{print\+\_\+tree\+\_\+node(tree\+\_\+t $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+tree\+\_\+node (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a8bfaf9827cbfd5840d851186f68af7f2}
+
+
+prints products full description 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_ac892293edb990109e99f00807f1a9fcd}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+depth@{tree\+\_\+depth}}
+\index{tree\+\_\+depth@{tree\+\_\+depth}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+depth(tree\+\_\+t $\ast$tree)}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+depth (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}\label{tree_8h_ac892293edb990109e99f00807f1a9fcd}
+
+
+Get the depth of the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & root node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the depth of the deepest subtree 
+\end{DoxyReturn}
+\hypertarget{tree_8h_ae1b16dd81e8fae922fcea2c8e9b0d376}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+edit@{tree\+\_\+edit}}
+\index{tree\+\_\+edit@{tree\+\_\+edit}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+edit(tree\+\_\+t $\ast$root, tree\+\_\+t $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+edit (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{root, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{tree_8h_ae1b16dd81e8fae922fcea2c8e9b0d376}
+
+
+edit given node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em the} & node to edit \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_a3cd7533992f2269289869a5351ad07ae}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+insert@{tree\+\_\+insert}}
+\index{tree\+\_\+insert@{tree\+\_\+insert}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+insert(tree\+\_\+t $\ast$$\ast$tree, tree\+\_\+t $\ast$insert)}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$$\ast$}]{tree, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{insert}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a3cd7533992f2269289869a5351ad07ae}
+
+
+insert a node in tree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em the} & node to insert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 1 for sucssesful 0 for none and 2 for dublicant 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a9d7ad8c6363f4801a519090c7e883562}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+new@{tree\+\_\+new}}
+\index{tree\+\_\+new@{tree\+\_\+new}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+new(char $\ast$name, char $\ast$description, int price, char $\ast$shelf, int quantity)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree\+\_\+t}$\ast$ tree\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{char $\ast$}]{description, }
+\item[{int}]{price, }
+\item[{char $\ast$}]{shelf, }
+\item[{int}]{quantity}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a9d7ad8c6363f4801a519090c7e883562}
+
+
+creates a new node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & name\\
+\hline
+{\em node} & description\\
+\hline
+{\em node} & price\\
+\hline
+{\em node} & shelf\\
+\hline
+{\em node} & quantity\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new node 
+\end{DoxyReturn}
+\hypertarget{tree_8h_a5caa21852a879ed4559c600a75b9ad73}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+remove@{tree\+\_\+remove}}
+\index{tree\+\_\+remove@{tree\+\_\+remove}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+remove(tree\+\_\+t $\ast$$\ast$root, tree\+\_\+t $\ast$node, int index)}]{\setlength{\rightskip}{0pt plus 5cm}void tree\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$$\ast$}]{root, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{node, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{tree_8h_a5caa21852a879ed4559c600a75b9ad73}
+
+
+removes node at index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em the} & node to remove\\
+\hline
+{\em the} & index of the node \\
+\hline
+\end{DoxyParams}
+\hypertarget{tree_8h_adca9a2ab258432fa6ca019edd2f2722a}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+search\+\_\+duplicant@{tree\+\_\+search\+\_\+duplicant}}
+\index{tree\+\_\+search\+\_\+duplicant@{tree\+\_\+search\+\_\+duplicant}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+search\+\_\+duplicant(tree\+\_\+t $\ast$node, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree\+\_\+t}$\ast$ tree\+\_\+search\+\_\+duplicant (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{tree_8h_adca9a2ab258432fa6ca019edd2f2722a}
+
+
+search for duplicant products 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & binary tree\\
+\hline
+{\em product} & name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the node if found 
+\end{DoxyReturn}
+\hypertarget{tree_8h_ac7a63c2e1de2e9e7b086a403f477f179}{}\index{tree.\+h@{tree.\+h}!tree\+\_\+size@{tree\+\_\+size}}
+\index{tree\+\_\+size@{tree\+\_\+size}!tree.\+h@{tree.\+h}}
+\subsubsection[{tree\+\_\+size(tree\+\_\+t $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}int tree\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{tree_8h_ac7a63c2e1de2e9e7b086a403f477f179}
+
+
+get the size of the tree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & root node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of nodes in the tree 
+\end{DoxyReturn}

@@ -1,0 +1,149 @@
+\hypertarget{controller_8h}{}\section{controller.\+h File Reference}
+\label{controller_8h}\index{controller.\+h@{controller.\+h}}
+
+
+Handels the main controls of the program.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pallet.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}reading.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaction__t}{action\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structaction__t}{action\+\_\+t} \hyperlink{controller_8h_ac25a714308f39923a7d61da8e34d921a}{Action\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{controller_8h_a205915a9a44af7e5474205283c974a0e}{add\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$root, \hyperlink{controller_8h_ac25a714308f39923a7d61da8e34d921a}{Action\+\_\+t} $\ast$action)
+\begin{DoxyCompactList}\small\item\em add goods to the storage \end{DoxyCompactList}\item 
+void \hyperlink{controller_8h_a20ed60ba0ea7ed1e045422ee3fd8f151}{remove\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$$\ast$root, \hyperlink{controller_8h_ac25a714308f39923a7d61da8e34d921a}{Action\+\_\+t} $\ast$action)
+\begin{DoxyCompactList}\small\item\em removes goods from the storage \end{DoxyCompactList}\item 
+void \hyperlink{controller_8h_ac26643d674d61d93853b5847216f1e63}{edit\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$root, \hyperlink{controller_8h_ac25a714308f39923a7d61da8e34d921a}{Action\+\_\+t} $\ast$action)
+\begin{DoxyCompactList}\small\item\em edit goods in the storage \end{DoxyCompactList}\item 
+void \hyperlink{controller_8h_a78ffa00b42d23d5951e3be59339372ce}{list\+\_\+goods} (\hyperlink{structtree}{tree\+\_\+t} $\ast$\hyperlink{structtree}{tree})
+\begin{DoxyCompactList}\small\item\em prints out the whole storage \end{DoxyCompactList}\item 
+void \hyperlink{controller_8h_aa0bb504697a45f6e7052da45c3bb73be}{pack\+\_\+pallet} (\hyperlink{structtree}{tree\+\_\+t} $\ast$root, \hyperlink{structpallet}{pallet\+\_\+t} $\ast$$\ast$\hyperlink{structpallet}{pallet})
+\begin{DoxyCompactList}\small\item\em pack goods from storage to pallet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handels the main controls of the program. 
+
+\begin{DoxyAuthor}{Authors}
+\+: Anton Larsson \& Mathias Palm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 27 Oct 2015 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{controller_8h_ac25a714308f39923a7d61da8e34d921a}{}\index{controller.\+h@{controller.\+h}!Action\+\_\+t@{Action\+\_\+t}}
+\index{Action\+\_\+t@{Action\+\_\+t}!controller.\+h@{controller.\+h}}
+\subsubsection[{Action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf action\+\_\+t}  {\bf Action\+\_\+t}}\label{controller_8h_ac25a714308f39923a7d61da8e34d921a}
+Struct for handling undo action 
+
+\subsection{Function Documentation}
+\hypertarget{controller_8h_a205915a9a44af7e5474205283c974a0e}{}\index{controller.\+h@{controller.\+h}!add\+\_\+goods@{add\+\_\+goods}}
+\index{add\+\_\+goods@{add\+\_\+goods}!controller.\+h@{controller.\+h}}
+\subsubsection[{add\+\_\+goods(tree\+\_\+t $\ast$$\ast$root, Action\+\_\+t $\ast$action)}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$$\ast$}]{root, }
+\item[{{\bf Action\+\_\+t} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\label{controller_8h_a205915a9a44af7e5474205283c974a0e}
+
+
+add goods to the storage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to tree\+\_\+t pointer\\
+\hline
+{\em Action\+\_\+t} & pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{controller_8h_ac26643d674d61d93853b5847216f1e63}{}\index{controller.\+h@{controller.\+h}!edit\+\_\+goods@{edit\+\_\+goods}}
+\index{edit\+\_\+goods@{edit\+\_\+goods}!controller.\+h@{controller.\+h}}
+\subsubsection[{edit\+\_\+goods(tree\+\_\+t $\ast$root, Action\+\_\+t $\ast$action)}]{\setlength{\rightskip}{0pt plus 5cm}void edit\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{root, }
+\item[{{\bf Action\+\_\+t} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\label{controller_8h_ac26643d674d61d93853b5847216f1e63}
+
+
+edit goods in the storage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to tree\+\_\+t pointer\\
+\hline
+{\em Action\+\_\+t} & pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{controller_8h_a78ffa00b42d23d5951e3be59339372ce}{}\index{controller.\+h@{controller.\+h}!list\+\_\+goods@{list\+\_\+goods}}
+\index{list\+\_\+goods@{list\+\_\+goods}!controller.\+h@{controller.\+h}}
+\subsubsection[{list\+\_\+goods(tree\+\_\+t $\ast$tree)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)}\label{controller_8h_a78ffa00b42d23d5951e3be59339372ce}
+
+
+prints out the whole storage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to tree\+\_\+t pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{controller_8h_aa0bb504697a45f6e7052da45c3bb73be}{}\index{controller.\+h@{controller.\+h}!pack\+\_\+pallet@{pack\+\_\+pallet}}
+\index{pack\+\_\+pallet@{pack\+\_\+pallet}!controller.\+h@{controller.\+h}}
+\subsubsection[{pack\+\_\+pallet(tree\+\_\+t $\ast$root, pallet\+\_\+t $\ast$$\ast$pallet)}]{\setlength{\rightskip}{0pt plus 5cm}void pack\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$}]{root, }
+\item[{{\bf pallet\+\_\+t} $\ast$$\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{controller_8h_aa0bb504697a45f6e7052da45c3bb73be}
+
+
+pack goods from storage to pallet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to tree\+\_\+t pointer\\
+\hline
+{\em pointer} & to pallet\+\_\+t pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{controller_8h_a20ed60ba0ea7ed1e045422ee3fd8f151}{}\index{controller.\+h@{controller.\+h}!remove\+\_\+goods@{remove\+\_\+goods}}
+\index{remove\+\_\+goods@{remove\+\_\+goods}!controller.\+h@{controller.\+h}}
+\subsubsection[{remove\+\_\+goods(tree\+\_\+t $\ast$$\ast$root, Action\+\_\+t $\ast$action)}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+\_\+goods (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+t} $\ast$$\ast$}]{root, }
+\item[{{\bf Action\+\_\+t} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\label{controller_8h_a20ed60ba0ea7ed1e045422ee3fd8f151}
+
+
+removes goods from the storage 
+
+pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em Action\+\_\+t} & pointer \\
+\hline
+\end{DoxyParams}

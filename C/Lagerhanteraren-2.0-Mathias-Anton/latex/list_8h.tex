@@ -1,0 +1,245 @@
+\hypertarget{list_8h}{}\section{list.\+h File Reference}
+\label{list_8h}\index{list.\+h@{list.\+h}}
+
+
+handles product shelf and count  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$strings.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}reading.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{list_8h_a15376354e4e8b4f1732e9df17f30786c}{}typedef struct \hyperlink{structlist}{list} \hyperlink{list_8h_a15376354e4e8b4f1732e9df17f30786c}{list\+\_\+t}\label{list_8h_a15376354e4e8b4f1732e9df17f30786c}
+
+\begin{DoxyCompactList}\small\item\em Struct containging products. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structlist}{list\+\_\+t} $\ast$ \hyperlink{list_8h_a2304dee3035eda655a6aaa975cbe8c17}{list\+\_\+new} (char $\ast$shelf, int count)
+\begin{DoxyCompactList}\small\item\em creates a new list \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_a7d57444a2925986e12591b9c4b77a4ad}{list\+\_\+append} (\hyperlink{structlist}{list\+\_\+t} $\ast$$\ast$\hyperlink{structlist}{list}, char $\ast$shelf, int quantity)
+\item 
+\hyperlink{structlist}{list\+\_\+t} $\ast$ \hyperlink{list_8h_a0ddbad7653b5d208b479bb1e528d2f09}{remove\+\_\+shelf} (\hyperlink{structlist}{list\+\_\+t} $\ast$$\ast$\hyperlink{structlist}{list})
+\item 
+void \hyperlink{list_8h_a5166efb64e245cd7e4a45132c043251a}{list\+\_\+change\+\_\+count} (\hyperlink{structlist}{list\+\_\+t} $\ast$$\ast$\hyperlink{structlist}{list}, int count)
+\item 
+bool \hyperlink{list_8h_a183f60fcd914ec5a313bb190fe3edd86}{check\+\_\+for\+\_\+duplicant} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list}, char $\ast$shelf)
+\item 
+int \hyperlink{list_8h_a95d76edca6b694b79ec54acd31fe0b82}{list\+\_\+length} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\begin{DoxyCompactList}\small\item\em returns the lenght of the list \end{DoxyCompactList}\item 
+int \hyperlink{list_8h_a6d8563a7aad0796e2b71a8cdb0a9acf4}{list\+\_\+get\+\_\+count} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\begin{DoxyCompactList}\small\item\em returns the total of product qunatity in the list \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_a1c5aacb34fed56c388c3fab8d2df0bb2}{list\+\_\+print\+\_\+shelfs} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\begin{DoxyCompactList}\small\item\em print outs the list \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_abf9dff3b22e038216e65b587c90cad9f}{free\+\_\+list\+\_\+item} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\begin{DoxyCompactList}\small\item\em frees an elemnt from the memory \end{DoxyCompactList}\item 
+void \hyperlink{list_8h_a1759d6da9aa1478aae92ff7b3ab7df45}{free\+\_\+list} (\hyperlink{structlist}{list\+\_\+t} $\ast$\hyperlink{structlist}{list})
+\begin{DoxyCompactList}\small\item\em frees the list from memery \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+handles product shelf and count 
+
+\begin{DoxyAuthor}{Authors}
+\+: Anton Larsson \& Mathias Palm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 27 Oct 2015 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{list_8h_a183f60fcd914ec5a313bb190fe3edd86}{}\index{list.\+h@{list.\+h}!check\+\_\+for\+\_\+duplicant@{check\+\_\+for\+\_\+duplicant}}
+\index{check\+\_\+for\+\_\+duplicant@{check\+\_\+for\+\_\+duplicant}!list.\+h@{list.\+h}}
+\subsubsection[{check\+\_\+for\+\_\+duplicant(list\+\_\+t $\ast$list, char $\ast$shelf)}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+\_\+for\+\_\+duplicant (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list, }
+\item[{char $\ast$}]{shelf}
+\end{DoxyParamCaption}
+)}\label{list_8h_a183f60fcd914ec5a313bb190fe3edd86}
+checks for duplicant shelfs
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list\\
+\hline
+{\em shelf} & as a string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if exists 
+\end{DoxyReturn}
+\hypertarget{list_8h_a1759d6da9aa1478aae92ff7b3ab7df45}{}\index{list.\+h@{list.\+h}!free\+\_\+list@{free\+\_\+list}}
+\index{free\+\_\+list@{free\+\_\+list}!list.\+h@{list.\+h}}
+\subsubsection[{free\+\_\+list(list\+\_\+t $\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_a1759d6da9aa1478aae92ff7b3ab7df45}
+
+
+frees the list from memery 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8h_abf9dff3b22e038216e65b587c90cad9f}{}\index{list.\+h@{list.\+h}!free\+\_\+list\+\_\+item@{free\+\_\+list\+\_\+item}}
+\index{free\+\_\+list\+\_\+item@{free\+\_\+list\+\_\+item}!list.\+h@{list.\+h}}
+\subsubsection[{free\+\_\+list\+\_\+item(list\+\_\+t $\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+list\+\_\+item (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_abf9dff3b22e038216e65b587c90cad9f}
+
+
+frees an elemnt from the memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8h_a7d57444a2925986e12591b9c4b77a4ad}{}\index{list.\+h@{list.\+h}!list\+\_\+append@{list\+\_\+append}}
+\index{list\+\_\+append@{list\+\_\+append}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+append(list\+\_\+t $\ast$$\ast$list, char $\ast$shelf, int quantity)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+append (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$$\ast$}]{list, }
+\item[{char $\ast$}]{shelf, }
+\item[{int}]{quantity}
+\end{DoxyParamCaption}
+)}\label{list_8h_a7d57444a2925986e12591b9c4b77a4ad}
+inserts a new elemnt at the end of the list
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+\_\+t} & $\ast$$\ast$pointer\\
+\hline
+{\em char} & $\ast$pointer\\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8h_a5166efb64e245cd7e4a45132c043251a}{}\index{list.\+h@{list.\+h}!list\+\_\+change\+\_\+count@{list\+\_\+change\+\_\+count}}
+\index{list\+\_\+change\+\_\+count@{list\+\_\+change\+\_\+count}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+change\+\_\+count(list\+\_\+t $\ast$$\ast$list, int count)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+change\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$$\ast$}]{list, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{list_8h_a5166efb64e245cd7e4a45132c043251a}
+changes the count for shelf
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list pointer\\
+\hline
+{\em number} & to remove from shelf \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8h_a6d8563a7aad0796e2b71a8cdb0a9acf4}{}\index{list.\+h@{list.\+h}!list\+\_\+get\+\_\+count@{list\+\_\+get\+\_\+count}}
+\index{list\+\_\+get\+\_\+count@{list\+\_\+get\+\_\+count}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+get\+\_\+count(list\+\_\+t $\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+get\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_a6d8563a7aad0796e2b71a8cdb0a9acf4}
+
+
+returns the total of product qunatity in the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total quantity of the list as int 
+\end{DoxyReturn}
+\hypertarget{list_8h_a95d76edca6b694b79ec54acd31fe0b82}{}\index{list.\+h@{list.\+h}!list\+\_\+length@{list\+\_\+length}}
+\index{list\+\_\+length@{list\+\_\+length}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+length(list\+\_\+t $\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_a95d76edca6b694b79ec54acd31fe0b82}
+
+
+returns the lenght of the list 
+
+Returns the length of the list. It is undefined whether the length is calculated in O(n) time or whether there is a size counter in the list object that is manipulated by insert, remove, etc. 
+\begin{DoxyParams}{Parameters}
+{\em list} & the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of list 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lenght of the list as int 
+\end{DoxyReturn}
+\hypertarget{list_8h_a2304dee3035eda655a6aaa975cbe8c17}{}\index{list.\+h@{list.\+h}!list\+\_\+new@{list\+\_\+new}}
+\index{list\+\_\+new@{list\+\_\+new}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+new(char $\ast$shelf, int count)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf list\+\_\+t}$\ast$ list\+\_\+new (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{shelf, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{list_8h_a2304dee3035eda655a6aaa975cbe8c17}
+
+
+creates a new list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$pointer\\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+t $\ast$pointer 
+\end{DoxyReturn}
+\hypertarget{list_8h_a1c5aacb34fed56c388c3fab8d2df0bb2}{}\index{list.\+h@{list.\+h}!list\+\_\+print\+\_\+shelfs@{list\+\_\+print\+\_\+shelfs}}
+\index{list\+\_\+print\+\_\+shelfs@{list\+\_\+print\+\_\+shelfs}!list.\+h@{list.\+h}}
+\subsubsection[{list\+\_\+print\+\_\+shelfs(list\+\_\+t $\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+print\+\_\+shelfs (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_a1c5aacb34fed56c388c3fab8d2df0bb2}
+
+
+print outs the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list \\
+\hline
+\end{DoxyParams}
+\hypertarget{list_8h_a0ddbad7653b5d208b479bb1e528d2f09}{}\index{list.\+h@{list.\+h}!remove\+\_\+shelf@{remove\+\_\+shelf}}
+\index{remove\+\_\+shelf@{remove\+\_\+shelf}!list.\+h@{list.\+h}}
+\subsubsection[{remove\+\_\+shelf(list\+\_\+t $\ast$$\ast$list)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf list\+\_\+t}$\ast$ remove\+\_\+shelf (
+\begin{DoxyParamCaption}
+\item[{{\bf list\+\_\+t} $\ast$$\ast$}]{list}
+\end{DoxyParamCaption}
+)}\label{list_8h_a0ddbad7653b5d208b479bb1e528d2f09}
+removes an elemnt from the list
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to the list pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the elemnt to remove 
+\end{DoxyReturn}

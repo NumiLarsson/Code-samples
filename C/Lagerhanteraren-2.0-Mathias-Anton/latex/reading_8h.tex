@@ -1,0 +1,175 @@
+\hypertarget{reading_8h}{}\section{reading.\+h File Reference}
+\label{reading_8h}\index{reading.\+h@{reading.\+h}}
+
+
+handels all the io  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{reading_8h_ab1e883065af7b19a21d6c5b6f142c153}{ask\+\_\+question\+\_\+char} (char $\ast$q, char $\ast$alt)
+\begin{DoxyCompactList}\small\item\em Prints a question and acceptable alternatives and waits for user input. If input is not one of the accepted characters then the answer will be rejected and the user will be prompted to input a new answer. \end{DoxyCompactList}\item 
+int \hyperlink{reading_8h_a3a4d9ee4d7cd8084055663cdde65bad6}{ask\+\_\+question\+\_\+int} (char $\ast$q)
+\begin{DoxyCompactList}\small\item\em Prints a question and awaits for user input. if not an int user will be promted to reenter. \end{DoxyCompactList}\item 
+bool \hyperlink{reading_8h_a2abe06e1a38e45f30a63bb086526b2cc}{is\+\_\+valid\+\_\+int} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Checks if a char is equal to in and returns true or false. \end{DoxyCompactList}\item 
+void \hyperlink{reading_8h_a0963a645646578cd97473f10450b83fb}{ask\+\_\+question\+\_\+string} (char $\ast$q, char $\ast$string, int size)
+\begin{DoxyCompactList}\small\item\em Prints a question and awaits for user input. Stores user input in the provided string if the provided size is right. \end{DoxyCompactList}\item 
+void \hyperlink{reading_8h_ae42228faca18309e58b41bdd51f6caee}{read\+\_\+line} (char $\ast$dest, int n, F\+I\+L\+E $\ast$source)
+\begin{DoxyCompactList}\small\item\em reads line from stdin \end{DoxyCompactList}\item 
+bool \hyperlink{reading_8h_a0243bb01b49d939b3c20c647c65fb5e0}{to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure} ()
+\begin{DoxyCompactList}\small\item\em aks the user to procede two times, the returns true or false \end{DoxyCompactList}\item 
+bool \hyperlink{reading_8h_abc63deea20f5cfaf284f30c565751f39}{to\+\_\+be\+\_\+sure} ()
+\begin{DoxyCompactList}\small\item\em aks the user to procede, the returns true or false \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+handels all the io 
+
+\begin{DoxyAuthor}{Authors}
+\+: Anton Larsson \& Mathias Palm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 27 Oct 2015 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{reading_8h_ab1e883065af7b19a21d6c5b6f142c153}{}\index{reading.\+h@{reading.\+h}!ask\+\_\+question\+\_\+char@{ask\+\_\+question\+\_\+char}}
+\index{ask\+\_\+question\+\_\+char@{ask\+\_\+question\+\_\+char}!reading.\+h@{reading.\+h}}
+\subsubsection[{ask\+\_\+question\+\_\+char(char $\ast$q, char $\ast$alt)}]{\setlength{\rightskip}{0pt plus 5cm}char ask\+\_\+question\+\_\+char (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{q, }
+\item[{char $\ast$}]{alt}
+\end{DoxyParamCaption}
+)}\label{reading_8h_ab1e883065af7b19a21d6c5b6f142c153}
+
+
+Prints a question and acceptable alternatives and waits for user input. If input is not one of the accepted characters then the answer will be rejected and the user will be prompted to input a new answer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & pointer\\
+\hline
+{\em char} & pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a char from the user 
+\end{DoxyReturn}
+\hypertarget{reading_8h_a3a4d9ee4d7cd8084055663cdde65bad6}{}\index{reading.\+h@{reading.\+h}!ask\+\_\+question\+\_\+int@{ask\+\_\+question\+\_\+int}}
+\index{ask\+\_\+question\+\_\+int@{ask\+\_\+question\+\_\+int}!reading.\+h@{reading.\+h}}
+\subsubsection[{ask\+\_\+question\+\_\+int(char $\ast$q)}]{\setlength{\rightskip}{0pt plus 5cm}int ask\+\_\+question\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\label{reading_8h_a3a4d9ee4d7cd8084055663cdde65bad6}
+
+
+Prints a question and awaits for user input. if not an int user will be promted to reenter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a int from the user 
+\end{DoxyReturn}
+\hypertarget{reading_8h_a0963a645646578cd97473f10450b83fb}{}\index{reading.\+h@{reading.\+h}!ask\+\_\+question\+\_\+string@{ask\+\_\+question\+\_\+string}}
+\index{ask\+\_\+question\+\_\+string@{ask\+\_\+question\+\_\+string}!reading.\+h@{reading.\+h}}
+\subsubsection[{ask\+\_\+question\+\_\+string(char $\ast$q, char $\ast$string, int size)}]{\setlength{\rightskip}{0pt plus 5cm}void ask\+\_\+question\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{q, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{reading_8h_a0963a645646578cd97473f10450b83fb}
+
+
+Prints a question and awaits for user input. Stores user input in the provided string if the provided size is right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & pointer\\
+\hline
+{\em char} & pointer\\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{reading_8h_a2abe06e1a38e45f30a63bb086526b2cc}{}\index{reading.\+h@{reading.\+h}!is\+\_\+valid\+\_\+int@{is\+\_\+valid\+\_\+int}}
+\index{is\+\_\+valid\+\_\+int@{is\+\_\+valid\+\_\+int}!reading.\+h@{reading.\+h}}
+\subsubsection[{is\+\_\+valid\+\_\+int(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+\_\+valid\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{reading_8h_a2abe06e1a38e45f30a63bb086526b2cc}
+
+
+Checks if a char is equal to in and returns true or false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{reading_8h_ae42228faca18309e58b41bdd51f6caee}{}\index{reading.\+h@{reading.\+h}!read\+\_\+line@{read\+\_\+line}}
+\index{read\+\_\+line@{read\+\_\+line}!reading.\+h@{reading.\+h}}
+\subsubsection[{read\+\_\+line(char $\ast$dest, int n, F\+I\+L\+E $\ast$source)}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{int}]{n, }
+\item[{F\+I\+L\+E $\ast$}]{source}
+\end{DoxyParamCaption}
+)}\label{reading_8h_ae42228faca18309e58b41bdd51f6caee}
+
+
+reads line from stdin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & pointer\\
+\hline
+{\em int} & \\
+\hline
+{\em F\+I\+L\+E} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{reading_8h_abc63deea20f5cfaf284f30c565751f39}{}\index{reading.\+h@{reading.\+h}!to\+\_\+be\+\_\+sure@{to\+\_\+be\+\_\+sure}}
+\index{to\+\_\+be\+\_\+sure@{to\+\_\+be\+\_\+sure}!reading.\+h@{reading.\+h}}
+\subsubsection[{to\+\_\+be\+\_\+sure()}]{\setlength{\rightskip}{0pt plus 5cm}bool to\+\_\+be\+\_\+sure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{reading_8h_abc63deea20f5cfaf284f30c565751f39}
+
+
+aks the user to procede, the returns true or false 
+
+\begin{DoxyReturn}{Returns}
+a int from the user 
+\end{DoxyReturn}
+\hypertarget{reading_8h_a0243bb01b49d939b3c20c647c65fb5e0}{}\index{reading.\+h@{reading.\+h}!to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure@{to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure}}
+\index{to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure@{to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure}!reading.\+h@{reading.\+h}}
+\subsubsection[{to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure()}]{\setlength{\rightskip}{0pt plus 5cm}bool to\+\_\+be\+\_\+sure\+\_\+to\+\_\+be\+\_\+sure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{reading_8h_a0243bb01b49d939b3c20c647c65fb5e0}
+
+
+aks the user to procede two times, the returns true or false 
+
+\begin{DoxyReturn}{Returns}
+a int from the user 
+\end{DoxyReturn}

@@ -1,0 +1,190 @@
+\hypertarget{pallet_8h}{}\section{pallet.\+h File Reference}
+\label{pallet_8h}\index{pallet.\+h@{pallet.\+h}}
+
+
+Handles packing and logistic on packing a pallet.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}reading.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{pallet_8h_afa234c49c2a1fee0d9af1a442d5ad4a0}{}typedef struct \hyperlink{structpallet}{pallet} \hyperlink{pallet_8h_afa234c49c2a1fee0d9af1a442d5ad4a0}{pallet\+\_\+t}\label{pallet_8h_afa234c49c2a1fee0d9af1a442d5ad4a0}
+
+\begin{DoxyCompactList}\small\item\em Struct containging a items list\+\_\+entry\+\_\+t who been packed on pallet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpallet}{pallet\+\_\+t} $\ast$ \hyperlink{pallet_8h_a9565c83f9161e0f3a67b427a26a17dc6}{create\+\_\+pallet} (char $\ast$name, int cost, int total)
+\begin{DoxyCompactList}\small\item\em init an empty pallet \end{DoxyCompactList}\item 
+void \hyperlink{pallet_8h_ab4302fbf06a5b5fec389ed95fb3996b9}{free\+\_\+pallet} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$\hyperlink{structpallet}{pallet})
+\item 
+bool \hyperlink{pallet_8h_a65551988f9b9587266a9d8b5d587bc6d}{is\+\_\+pallet\+\_\+empty} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$\hyperlink{structpallet}{pallet})
+\begin{DoxyCompactList}\small\item\em check if pallet is empty \end{DoxyCompactList}\item 
+bool \hyperlink{pallet_8h_abe7407fb28dc0b1505c79532a60a30f4}{pack\+\_\+item\+\_\+on\+\_\+pallet} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$$\ast$\hyperlink{structpallet}{pallet}, \hyperlink{structtree}{tree\+\_\+t} $\ast$item)
+\begin{DoxyCompactList}\small\item\em pack item on pallet \end{DoxyCompactList}\item 
+bool \hyperlink{pallet_8h_aa4b29ac8ba372a88bc382a37e6134af0}{check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$\hyperlink{structpallet}{pallet}, char $\ast$item)
+\begin{DoxyCompactList}\small\item\em check if item already exists on pallet \end{DoxyCompactList}\item 
+void \hyperlink{pallet_8h_a6728be38ed4a8eb31187e5303a7b6b05}{list\+\_\+pallet} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$\hyperlink{structpallet}{pallet})
+\item 
+void \hyperlink{pallet_8h_aa5547eac6ca92c0b8fe483adc91c28ca}{list\+\_\+detailed\+\_\+pallet} (\hyperlink{structpallet}{pallet\+\_\+t} $\ast$\hyperlink{structpallet}{pallet})
+\begin{DoxyCompactList}\small\item\em print out detailed list of current pallet \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles packing and logistic on packing a pallet. 
+
+\begin{DoxyAuthor}{Authors}
+\+: Anton Larsson \& Mathias Palm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 27 Oct 2015 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{pallet_8h_aa4b29ac8ba372a88bc382a37e6134af0}{}\index{pallet.\+h@{pallet.\+h}!check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet@{check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet}}
+\index{check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet@{check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet(pallet\+\_\+t $\ast$pallet, char $\ast$item)}]{\setlength{\rightskip}{0pt plus 5cm}bool check\+\_\+if\+\_\+exists\+\_\+on\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$}]{pallet, }
+\item[{char $\ast$}]{item}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_aa4b29ac8ba372a88bc382a37e6134af0}
+
+
+check if item already exists on pallet 
+
+Cheacking if item exists on pallet, return true if exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer\\
+\hline
+{\em void} & $\ast$pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{pallet_8h_a9565c83f9161e0f3a67b427a26a17dc6}{}\index{pallet.\+h@{pallet.\+h}!create\+\_\+pallet@{create\+\_\+pallet}}
+\index{create\+\_\+pallet@{create\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{create\+\_\+pallet(char $\ast$name, int cost, int total)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pallet\+\_\+t}$\ast$ create\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{cost, }
+\item[{int}]{total}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_a9565c83f9161e0f3a67b427a26a17dc6}
+
+
+init an empty pallet 
+
+Creating an empty linked list for the pallet
+
+\begin{DoxyReturn}{Returns}
+empty linked list of pallet\+\_\+t 
+\end{DoxyReturn}
+\hypertarget{pallet_8h_ab4302fbf06a5b5fec389ed95fb3996b9}{}\index{pallet.\+h@{pallet.\+h}!free\+\_\+pallet@{free\+\_\+pallet}}
+\index{free\+\_\+pallet@{free\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{free\+\_\+pallet(pallet\+\_\+t $\ast$pallet)}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_ab4302fbf06a5b5fec389ed95fb3996b9}
+free pallet from memory
+
+Funtion to delete pallet from memory before closing
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{pallet_8h_a65551988f9b9587266a9d8b5d587bc6d}{}\index{pallet.\+h@{pallet.\+h}!is\+\_\+pallet\+\_\+empty@{is\+\_\+pallet\+\_\+empty}}
+\index{is\+\_\+pallet\+\_\+empty@{is\+\_\+pallet\+\_\+empty}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{is\+\_\+pallet\+\_\+empty(pallet\+\_\+t $\ast$pallet)}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+\_\+pallet\+\_\+empty (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_a65551988f9b9587266a9d8b5d587bc6d}
+
+
+check if pallet is empty 
+
+Cheaking if linked list pallet is empty or not
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\hypertarget{pallet_8h_aa5547eac6ca92c0b8fe483adc91c28ca}{}\index{pallet.\+h@{pallet.\+h}!list\+\_\+detailed\+\_\+pallet@{list\+\_\+detailed\+\_\+pallet}}
+\index{list\+\_\+detailed\+\_\+pallet@{list\+\_\+detailed\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{list\+\_\+detailed\+\_\+pallet(pallet\+\_\+t $\ast$pallet)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+detailed\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_aa5547eac6ca92c0b8fe483adc91c28ca}
+
+
+print out detailed list of current pallet 
+
+Print out the current pallet in detail, showing item names, quantity, total price and shelf spots
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{pallet_8h_a6728be38ed4a8eb31187e5303a7b6b05}{}\index{pallet.\+h@{pallet.\+h}!list\+\_\+pallet@{list\+\_\+pallet}}
+\index{list\+\_\+pallet@{list\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{list\+\_\+pallet(pallet\+\_\+t $\ast$pallet)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$}]{pallet}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_a6728be38ed4a8eb31187e5303a7b6b05}
+print out current pallet
+
+Print out item name + quantity
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{pallet_8h_abe7407fb28dc0b1505c79532a60a30f4}{}\index{pallet.\+h@{pallet.\+h}!pack\+\_\+item\+\_\+on\+\_\+pallet@{pack\+\_\+item\+\_\+on\+\_\+pallet}}
+\index{pack\+\_\+item\+\_\+on\+\_\+pallet@{pack\+\_\+item\+\_\+on\+\_\+pallet}!pallet.\+h@{pallet.\+h}}
+\subsubsection[{pack\+\_\+item\+\_\+on\+\_\+pallet(pallet\+\_\+t $\ast$$\ast$pallet, tree\+\_\+t $\ast$item)}]{\setlength{\rightskip}{0pt plus 5cm}bool pack\+\_\+item\+\_\+on\+\_\+pallet (
+\begin{DoxyParamCaption}
+\item[{{\bf pallet\+\_\+t} $\ast$$\ast$}]{pallet, }
+\item[{{\bf tree\+\_\+t} $\ast$}]{item}
+\end{DoxyParamCaption}
+)}\label{pallet_8h_abe7407fb28dc0b1505c79532a60a30f4}
+
+
+pack item on pallet 
+
+Pdding item to pallet\+\_\+t and returns void if succsesfull
+
+
+\begin{DoxyParams}{Parameters}
+{\em pallet\+\_\+t} & $\ast$pointer\\
+\hline
+{\em void$\ast$} & pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
