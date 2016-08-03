@@ -1,0 +1,44 @@
+main = Gameplay
+cp = "tests/junit-4.12.jar:tests/hamcrest-core-1.3.jar"
+
+default:
+	javac -Xlint $(main).java
+	java $(main)
+
+run: 	debug
+	java Gameplay
+
+all:
+	javac *.java
+
+debug:
+	javac -Xlint *.java
+
+test:
+	javac -cp $(cp) *.java
+	java -cp $(cp):. org.junit.runner.JUnitCore AvatarTest BackpackTest BookTest CourseTest RoomTest
+
+javadoc:
+	mkdir javadoc
+	javadoc -d javadoc Gameplay.java World.java Room.java Teacher.java Backpack.java Course.java Item.java Key.java Sfinxen.java Avatar.java Book.java Creature.java Student.javaz
+
+clean-doc:
+	rm -rf javadoc
+
+clean-win:
+	del *.class
+	del #*.*#
+	del .#*
+	del *.java~
+
+clean:
+	rm -f .DS_Store
+	rm -f .#*
+	rm -f *.class
+	rm -f #*
+	rm -f *.*~
+	rm -f tests/*.class
+	rm -f tests/#*
+	rm -f tests/*.*~
+	rm -rf javadoc
+
